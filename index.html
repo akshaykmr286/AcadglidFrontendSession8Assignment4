@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Website Preloader Demo with jQuery - W3lessons.info</title>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+jQuery(window).load(function() { // makes sure the whole site is loaded
+	jQuery("#status").delay(2000).fadeOut("slow"); // will first fade out the loading animation
+	jQuery("#preloader").delay(1000).fadeOut("slow"); // will fade out the white DIV that covers the website.
+})
+</script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+ html {
+	font: 81.25%/1 arial, helvetica, sans-serif;
+	color: rgb(51, 51, 51);
+	direction: ltr;
+}
+#preloader  {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #fefefe;
+     z-index: 99;
+    height: 100%;
+ }
+#status  {
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     background-image: url(ajax-loader.gif);
+     background-repeat: no-repeat;
+     background-position: center;
+     margin: -100px 0 0 -100px;
+ }
+
+.customStyle{
+    color:deeppink;
+    font-size: 200%;
+}
+</style>
+</head>
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<body style="background:#fff">
+    <div>
+    <h1>jQuery Preloader with Jumbotron</h1>
+        <div style="margin:0% 10%; 0%">
+            <marquee>
+                <p style="color:#F00; font-weight:bold" id="movingpara">Refresh this page to see the demo </p>
+            </marquee>
+            Follow Me - <a href="http://akshaynayak.in" target="_blank">Akshay</a> for more<br>
+        </div><br><br><h5>This is the Jumbotron Box</h5>
+    <div class="container">
+      <div class="jumbotron">
+        Jumbotron Bootstrap : 
+        This is about Jumbotron in bootstrap and now click the buttons to see the magic..
+      </div>
+        <p>This is out of Jumbotron and It is not having any background and special styles.</p>
+        <p><button type="button" class="btn btn-danger" id="hide">Hide Content</button>
+        <button type="button" class="btn btn-success" id="show">Show Content</button>
+        <button type="button" class="btn btn-info" id="change">Change Content Style</button></p>
+    </div>
+</div>
+<br />
+<br />
+<center>
+  <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5104998679826243";
+/* mysite_indivi */
+google_ad_slot = "0527018651";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+</center>
+
+<div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:50px;top:50px;"> <a class="addthis_button_facebook_like" fb:like:layout="box_count" addthis:url=""></a> <a class="addthis_button_tweet" tw:count="vertical"></a> <a class="addthis_button_google_plusone" g:plusone:size="tall"></a> <a class="addthis_counter"></a> </div>
+<script type="text/javascript" src=""></script>
+<script>
+$("#hide").click(function(){
+    $(".jumbotron").hide(2000);
+});
+$("#show").click(function(){
+    $(".jumbotron").show(2000);
+}); 
+$("#change").click(function(){
+    $(".jumbotron").addClass("customStyle");
+}); 
+</script>
+</body>
+</html>
